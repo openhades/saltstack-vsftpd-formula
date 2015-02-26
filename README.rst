@@ -21,8 +21,7 @@ Installs the ``vsftpd`` server package and service.
 ``vsftpd.config``
 ------------------
 
-Installs the ssh daemon configuration file included in this formula
+Installs the vsftpd daemon configuration file included in this formula
 (under "vsftpd/files"). This configuration file is populated
 by values from pillar. ``pillar.example`` results in the generation
 of the default ``vsftpd.conf`` file on Ubuntu 14.04 Trusty Tahr .
-
