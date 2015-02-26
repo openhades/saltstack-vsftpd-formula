@@ -2,7 +2,7 @@
     'Debian': {
         'server': 'vsftpd',
         'service': 'vsftpd',
-        'vsftpd_config': '/etc/vsftpd_conf',
-        'vsftpd_config_src': 'salt://vsftpd/files/vsftpd_conf',
+        'vsftpd_config': '/etc/vsftpd_config',
+        'vsftpd_config_src': 'salt://vsftpd/files/vsftpd_config',
     },
 }, merge=salt['pillar.get']('vsftpd:lookup')) %}
