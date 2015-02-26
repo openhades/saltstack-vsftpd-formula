@@ -2,15 +2,11 @@
 {#- present in vsftpd_config and known in actual file options -#}
 {%- set processed_options = [] -%}
 
-{#- generic renderer used for vsftpd matches, known options, -#}
+{#- generic renderer used for vsftpd known options, -#}
 {#- and unknown options -#}
 {%- macro render_option(keyword, default, config_dict=vsftpd_config) -%}
   {%- set value = config_dict.get(keyword, default) -%}
-  {%- if value is sameas true -%}
-{{ keyword }} yes
-  {%- elif value is sameas false -%}
-{{ keyword }} no
-  {%- elif value is string or value is number -%}
+  {%- if value is string or value is number -%}
 {{ keyword }}={{ value }}
   {%- else -%}
 {%- for single_value in value -%}
