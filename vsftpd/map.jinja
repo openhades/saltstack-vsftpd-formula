@@ -11,4 +11,10 @@
         'vsftpd_config': '/usr/local/etc/vsftpd.conf',
         'vsftpd_config_src': 'salt://vsftpd/files/vsftpd.conf',
     },
+    'RedHat': {
+        'server': 'vsftpd',
+        'service': 'vsftpd',
+        'vsftpd_config': '/etc/vsftpd/vsftpd.conf',
+        'vsftpd_config_src': 'salt://vsftpd/files/vsftpd.conf',
+    },
 }, merge=salt['pillar.get']('vsftpd:lookup')) %}
