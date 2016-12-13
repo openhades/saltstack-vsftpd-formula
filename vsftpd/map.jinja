@@ -17,4 +17,10 @@
         'vsftpd_config': '/etc/vsftpd/vsftpd.conf',
         'vsftpd_config_src': 'salt://vsftpd/files/vsftpd.conf',
     },
+    'Arch': {
+        'server': 'vsftpd',
+        'service': 'vssftpd',
+        'vsftpd_config': '/etc/vsftpd.conf',
+        'vsftpd_config_src': 'salt://vsftpd/files/vsftpd.conf',
+    },
 }, merge=salt['pillar.get']('vsftpd:lookup')) %}
