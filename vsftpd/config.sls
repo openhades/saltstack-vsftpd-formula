@@ -5,8 +5,8 @@ include:
 
 vsftpd_config:
   file.managed:
-    - name: {{ vsftpd.vsftpd_config }}
-    - source: {{ vsftpd.vsftpd_config_src }}
+    - name: {{ vsftpd.config }}
+    - source: {{ vsftpd.config_src }}
     - template: jinja
     - user: root
     - mode: 644
